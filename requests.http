@@ -8,9 +8,9 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "email1@email.com",
+    "username": "email2@email.com",
     "password": "123456",
-    "role": "ROLE_ADMIN"
+    "role": "ROLE_CLIENTE"
 }
 
 ###
@@ -32,3 +32,8 @@ Content-Type: application/json
 }
 
 ###
+#Get All Users
+
+GET {{baseUrl}}/usuarios
+Accept: application/json
+Content-Type: application/json

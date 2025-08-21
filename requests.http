@@ -8,9 +8,9 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "email2@email.com",
+    "username": "email4@email.com",
     "password": "123456",
-    "role": "ROLE_CLIENTE"
+    "role": "a"
 }
 
 ###

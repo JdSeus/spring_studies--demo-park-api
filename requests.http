@@ -1,5 +1,7 @@
 @baseUrl = http://localhost:8080/api/v1
 
+###
+
 POST {{baseUrl}}/usuarios
 Accept: application/json
 Content-Type: application/json
@@ -9,5 +11,11 @@ Content-Type: application/json
     "password": "123456",
     "role": "ROLE_ADMIN"
 }
+
+###
+
+GET {{baseUrl}}/usuarios/1
+Accept: application/json
+Content-Type: application/json
 
 ###

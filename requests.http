@@ -28,7 +28,9 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "password": "101010"
+    "senhaAtual": "101010",
+    "novaSenha": "111111",
+    "confirmaSenha": "111111"
 }
 
 ###

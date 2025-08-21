@@ -1,6 +1,7 @@
 @baseUrl = http://localhost:8080/api/v1
 
 ###
+#Create User
 
 POST {{baseUrl}}/usuarios
 Accept: application/json
@@ -13,9 +14,21 @@ Content-Type: application/json
 }
 
 ###
+#Get User
 
 GET {{baseUrl}}/usuarios/1
 Accept: application/json
 Content-Type: application/json
+
+###
+#Update Password of User
+
+PATCH {{baseUrl}}/usuarios/1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "password": "101010"
+}
 
 ###

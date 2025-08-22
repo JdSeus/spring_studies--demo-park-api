@@ -22,12 +22,13 @@ Content-Type: application/json
 ###
 #Update Password of User
 
-PATCH {{baseUrl}}/usuarios/1
+PATCH {{baseUrl}}/usuarios/108
 Accept: application/json
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZTFAdGVzdGUuY29tIiwiaWF0IjoxNzU1ODkyNTk2LCJleHAiOjE3NTU4OTI3MTYsInJvbGUiOiJDTElFTlRFIn0.ABdrcc5q8ebLX3eIh6khMh0mn2zcMreiseiN9Qnu-EE"
 
 {
-    "senhaAtual": "111111",
+    "senhaAtual": "123456",
     "novaSenha": "111111",
     "confirmaSenha": "111111"
 }
@@ -57,6 +58,6 @@ Content-Type: application/json
 GET {{baseUrl}}/usuarios
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZTFAdGVzdGUuY29tIiwiaWF0IjoxNzU1ODkwOTQxLCJleHAiOjE3NTU4OTEwNjEsInJvbGUiOiJDTElFTlRFIn0.HsxhUvYFeyo5XTub91Co3XnJIspLBx7QomONGuEe6S8
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZTFAdGVzdGUuY29tIiwiaWF0IjoxNzU1ODkyNTk2LCJleHAiOjE3NTU4OTI3MTYsInJvbGUiOiJDTElFTlRFIn0.ABdrcc5q8ebLX3eIh6khMh0mn2zcMreiseiN9Qnu-EE"
 
 ###

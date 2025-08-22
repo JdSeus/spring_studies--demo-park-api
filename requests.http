@@ -50,3 +50,13 @@ Content-Type: application/json
     "username": "teste1@teste.com",
     "password": "123456"
 }
+
+###
+#Get All Users
+
+GET {{baseUrl}}/usuarios
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZTFAdGVzdGUuY29tIiwiaWF0IjoxNzU1ODkwOTQxLCJleHAiOjE3NTU4OTEwNjEsInJvbGUiOiJDTElFTlRFIn0.HsxhUvYFeyo5XTub91Co3XnJIspLBx7QomONGuEe6S8
+
+###

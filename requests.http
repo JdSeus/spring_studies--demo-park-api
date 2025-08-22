@@ -8,7 +8,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "teste7@teste.com",
+    "username": "teste1@teste.com",
     "password": "123456"
 }
 
@@ -38,3 +38,15 @@ Content-Type: application/json
 GET {{baseUrl}}/usuarios
 Accept: application/json
 Content-Type: application/json
+
+
+###
+#Auth
+POST http://localhost:8080/api/v1/auth
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username": "teste1@teste.com",
+    "password": "123456"
+}

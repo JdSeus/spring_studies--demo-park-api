@@ -66,7 +66,7 @@ public class JwtUtils {
         return getClaimsFromToken(token).getSubject();
     }
 
-    public static boolean IsTokenValid(String token) {
+    public static boolean isTokenValid(String token) {
         try {
             Jwts.parser().setSigningKey(generateKey()).build()
                     .parseClaimsJws(refactorToken(token));

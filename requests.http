@@ -15,10 +15,10 @@ Content-Type: application/json
 ###
 #Get User
 
-GET {{baseUrl}}/usuarios/1
+GET {{baseUrl}}/usuarios/109
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE3NTU4OTM1NDAsImV4cCI6MTc1NTg5NTM0MCwicm9sZSI6IkFETUlOIn0.4FNb9mt6Kmx5FlDYwoE9O71M3kKoT7OlazSOxApomL0"
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZTFAdGVzdGUuY29tIiwiaWF0IjoxNzU1ODkzODk4LCJleHAiOjE3NTU4OTU2OTgsInJvbGUiOiJDTElFTlRFIn0.4JKN8rimIucZYHwtQHM5VWY7AJaW4rsq-14hCgKzuFY"
 
 ###
 #Update Password of User
@@ -49,8 +49,8 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "admin@email.com",
-    "password": "111111"
+    "username": "teste1@teste.com",
+    "password": "123456"
 }
 
 ###

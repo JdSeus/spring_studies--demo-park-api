@@ -15,7 +15,7 @@ Content-Type: application/json
 ###
 #Get User
 
-GET {{baseUrl}}/usuarios/1
+GET {{baseUrl}}/usuarios/15
 Accept: application/json
 Content-Type: application/json
 

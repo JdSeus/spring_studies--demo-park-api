@@ -4,7 +4,7 @@ import com.julianoseus.demo_park_api.jwt.JwtToken;
 import com.julianoseus.demo_park_api.jwt.JwtUserDetailsService;
 import com.julianoseus.demo_park_api.web.dto.UsuarioLoginDto;
 import com.julianoseus.demo_park_api.web.exception.ErrorMessage;
-import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,17 +28,17 @@ public class AutenticacaoController {
     private final AuthenticationManager authenticationManager;
 
     @PostMapping("/auth")
-    public ResponseEntity<?> autenticar(@RequestBody @Valid UsuarioLoginDto dto, HttpServlet request) {
+    public ResponseEntity<?> autenticar(@RequestBody @Valid UsuarioLoginDto dto, HttpServletRequest request) {
         log.info("Processo de autenticação pelo login {}", dto.getUsername());
         try {
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(dto.getUsername(), dto.getPassword());
             authenticationManager.authenticate(authenticationToken);
             JwtToken token = detailsService.getTokenAuthenticated(dto.getUsername());
             return ResponseEntity.ok(token);
-        } catch (AuthenticationException) {
+        } catch (AuthenticationException ex) {
             log.warn("Bad Credentials from username '{}'", dto.getUsername());
         }
-        return ResponseEntity.badRequest().body(new ErrorMessage(request, HttpStatus.BAD_REQUEST), "Credenciais Inváldias");
+        return ResponseEntity.badRequest().body(new ErrorMessage(request, HttpStatus.BAD_REQUEST, "Credenciais Inváldias"));
     }
 
 

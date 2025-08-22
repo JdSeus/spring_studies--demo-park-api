@@ -8,8 +8,8 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "@teste.com",
-    "password": "1234"
+    "username": "teste7@teste.com",
+    "password": "123456"
 }
 
 ###

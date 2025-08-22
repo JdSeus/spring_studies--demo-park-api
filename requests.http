@@ -18,6 +18,13 @@ Content-Type: application/json
 GET {{baseUrl}}/usuarios/109
 Accept: application/json
 Content-Type: application/json
+
+###
+#Get User
+
+GET {{baseUrl}}/usuarios/110
+Accept: application/json
+Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZTFAdGVzdGUuY29tIiwiaWF0IjoxNzU1ODkzODk4LCJleHAiOjE3NTU4OTU2OTgsInJvbGUiOiJDTElFTlRFIn0.4JKN8rimIucZYHwtQHM5VWY7AJaW4rsq-14hCgKzuFY"
 
 ###

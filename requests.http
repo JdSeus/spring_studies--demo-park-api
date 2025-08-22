@@ -48,6 +48,24 @@ GET {{baseUrl}}/usuarios
 Accept: application/json
 Content-Type: application/json
 
+###
+#Get All Users
+
+GET {{baseUrl}}/usuarios
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE3NTU4OTU2NDYsImV4cCI6MTc1NTg5NzQ0Niwicm9sZSI6IkFETUlOIn0.XMutNnbC0PMfbbHZVoJlgJXK5RvSIOpYx_PewPcZs6w"
+
+
+###
+#Get All Users
+
+GET {{baseUrl}}/usuarios
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZTFAdGVzdGUuY29tIiwiaWF0IjoxNzU1ODk1MzE2LCJleHAiOjE3NTU4OTcxMTYsInJvbGUiOiJDTElFTlRFIn0.GN0HG38HCQX4hoXd9fQuJ8qkNPrB46V7HB-CKy8b6d8"
+
+
 
 ###
 #Auth
@@ -56,7 +74,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "teste1@teste.com",
+    "username": "admin@email.com",
     "password": "123456"
 }
 

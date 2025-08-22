@@ -354,6 +354,7 @@ public class UsuarioIT {
         List<UsuarioResponseDto> responseBody = testClient
                 .get()
                 .uri("/api/v1/usuarios")
+                .headers(JwtAuthentication.getHeaderAuthorization(testClient, "altrano@email.com", "123456"))
                 .exchange()
                 .expectStatus().isOk()
                 .expectBodyList(UsuarioResponseDto.class) // <-- aqui vai a classe
@@ -362,6 +363,22 @@ public class UsuarioIT {
 
         org.assertj.core.api.Assertions.assertThat(responseBody).isNotNull();
         org.assertj.core.api.Assertions.assertThat(responseBody.size()).isEqualTo(3);
+    }
+
+    @Test
+    public void listarUsuarios_ComUsuarioSemPermissao_RetornarErrorMessageComStatus403() {
+        ErrorMessage responseBody = testClient
+                .get()
+                .uri("/api/v1/usuarios")
+                .headers(JwtAuthentication.getHeaderAuthorization(testClient, "beltrano@email.com", "123456"))
+                .exchange()
+                .expectStatus().isForbidden()
+                .expectBody(ErrorMessage.class)
+                .returnResult()
+                .getResponseBody();
+
+        org.assertj.core.api.Assertions.assertThat(responseBody).isNotNull();
+        org.assertj.core.api.Assertions.assertThat(responseBody.getStatus()).isEqualTo(403);
     }
 
 }

@@ -1,5 +1,6 @@
 package com.julianoseus.demo_park_api.web.exception;
 
+import com.julianoseus.demo_park_api.exception.CpfUniqueViolationException;
 import com.julianoseus.demo_park_api.exception.EntityNotFoundException;
 import com.julianoseus.demo_park_api.exception.PasswordInvalidException;
 import com.julianoseus.demo_park_api.exception.UsernameUniqueValidationException;
@@ -45,7 +46,7 @@ public class ApiExceptionHandler {
                 .body(new ErrorMessage(request, HttpStatus.NOT_FOUND, ex.getMessage()));
     }
 
-    @ExceptionHandler(UsernameUniqueValidationException.class)
+    @ExceptionHandler({UsernameUniqueValidationException.class, CpfUniqueViolationException.class})
     public ResponseEntity<ErrorMessage> uniqueViolationException(RuntimeException ex, HttpServletRequest request) {
         log.error("Api Error - ", ex);
         return ResponseEntity

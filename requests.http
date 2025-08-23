@@ -65,19 +65,6 @@ Accept: application/json
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZTFAdGVzdGUuY29tIiwiaWF0IjoxNzU1ODk1MzE2LCJleHAiOjE3NTU4OTcxMTYsInJvbGUiOiJDTElFTlRFIn0.GN0HG38HCQX4hoXd9fQuJ8qkNPrB46V7HB-CKy8b6d8"
 
-
-
-###
-#Auth
-POST http://localhost:8080/api/v1/auth
-Accept: application/json
-Content-Type: application/json
-
-{
-    "username": "altrano@email.com",
-    "password": "123456"
-}
-
 ###
 #Get All Users
 
@@ -88,15 +75,40 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlb
 
 ###
 
+#Create User
+
+POST {{baseUrl}}/usuarios
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username": "deltrano@email.com",
+    "password": "123456"
+}
+
+###
+#Auth
+POST http://localhost:8080/api/v1/auth
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username": "deltrano@email.com",
+    "password": "123456"
+}
+
+
+###
+
 #Create Client
 
 POST {{baseUrl}}/clientes
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NTk1ODUwNiwiZXhwIjoxNzU1OTYwMzA2LCJyb2xlIjoiQ0xJRU5URSJ9.kKuzRPp5qNiFROP5zK7_aJdiv3949cuPxcG6oyTOLrA
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZWx0cmFub0BlbWFpbC5jb20iLCJpYXQiOjE3NTU5Njc5MDgsImV4cCI6MTc1NTk2OTcwOCwicm9sZSI6IkNMSUVOVEUifQ.VurVLfE_kPYJGfrlyfzO8gUtGTCvgu49j8mWAUvrwZc
 
 {
-    "name": "Altrano",
+    "nome": "Deltrano",
     "cpf": "23288386003"
 }
 

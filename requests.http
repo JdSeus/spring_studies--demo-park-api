@@ -8,7 +8,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "teste2@teste.com",
+    "username": "citrano@email.com",
     "password": "123456"
 }
 
@@ -74,7 +74,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "admin@email.com",
+    "username": "altrano@email.com",
     "password": "123456"
 }
 
@@ -84,6 +84,20 @@ Content-Type: application/json
 GET {{baseUrl}}/usuarios
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZTFAdGVzdGUuY29tIiwiaWF0IjoxNzU1ODkzNDYyLCJleHAiOjE3NTU4OTUyNjIsInJvbGUiOiJDTElFTlRFIn0.EDhIUVFn3wKffHsDrH4KM7E1SGJk9ebTKxjUznAVc08"
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE3NTU5NTgyNjYsImV4cCI6MTc1NTk2MDA2Niwicm9sZSI6IkNMSUVOVEUifQ.WSl1L8YqqryzUAM2udGP4pCoN21hP_xEI3NavpLuJQo
+
+###
+
+#Create Client
+
+POST {{baseUrl}}/clientes
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NTk1ODUwNiwiZXhwIjoxNzU1OTYwMzA2LCJyb2xlIjoiQ0xJRU5URSJ9.kKuzRPp5qNiFROP5zK7_aJdiv3949cuPxcG6oyTOLrA
+
+{
+    "name": "Altrano",
+    "cpf": "23288386003"
+}
 
 ###

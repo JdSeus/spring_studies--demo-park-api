@@ -82,7 +82,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "deltrano@email.com",
+    "username": "beltrano@email.com",
     "password": "123456"
 }
 
@@ -93,7 +93,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "deltrano@email.com",
+    "username": "altrano@email.com",
     "password": "123456"
 }
 
@@ -105,11 +105,20 @@ Content-Type: application/json
 POST {{baseUrl}}/clientes
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZWx0cmFub0BlbWFpbC5jb20iLCJpYXQiOjE3NTU5Njc5MDgsImV4cCI6MTc1NTk2OTcwOCwicm9sZSI6IkNMSUVOVEUifQ.VurVLfE_kPYJGfrlyfzO8gUtGTCvgu49j8mWAUvrwZc
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiZWx0cmFub0BlbWFpbC5jb20iLCJpYXQiOjE3NTU5NzI1ODAsImV4cCI6MTc1NTk3NDM4MCwicm9sZSI6IkNMSUVOVEUifQ.k_L5-NLayX0JiR1Uak9UQOMIcwadQQeR5v5kn3dWKKs
 
 {
-    "nome": "Deltrano",
-    "cpf": "23288386003"
+    "nome": "Beltrano",
+    "cpf": "10390511030"
 }
+
+###
+
+#Get All Clients
+
+GET {{baseUrl}}/clientes?size=1&page=1&sord=id_asc
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NTk3MjYxOSwiZXhwIjoxNzU1OTc0NDE5LCJyb2xlIjoiQURNSU4ifQ.DnC-qwXZeIfnR__m5RmXj1KFQeB59pW-49vrTc5B_i4
 
 ###

@@ -82,7 +82,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "beltrano@email.com",
+    "username": "citrano@email.com",
     "password": "123456"
 }
 
@@ -93,7 +93,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "beltrano@email.com",
+    "username": "altrano@email.com",
     "password": "123456"
 }
 
@@ -131,3 +131,22 @@ Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiZWx0cmFub0BlbWFpbC5jb20iLCJpYXQiOjE3NTU5NzY1OTYsImV4cCI6MTc1NTk3ODM5Niwicm9sZSI6IkNMSUVOVEUifQ.amKmChr_CJynbyFjjF_yq1h6Dz61kkYM3P4nCQT-sgk
 
 ###
+#Create Vaga
+
+POST {{baseUrl}}/vagas
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjEyNjg0MSwiZXhwIjoxNzU2MTI4NjQxLCJyb2xlIjoiQURNSU4ifQ.Cp1gYKSHt1VVdzly8Apwy0qzLr7xeIh6UoxhNuVPnF4
+
+{
+    "codigo": "A-01",
+    "status": "LIVRE"
+}
+
+###
+#Get Vaga
+
+GET {{baseUrl}}/vagas/A-01
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjEyNjg0MSwiZXhwIjoxNzU2MTI4NjQxLCJyb2xlIjoiQURNSU4ifQ.Cp1gYKSHt1VVdzly8Apwy0qzLr7xeIh6UoxhNuVPnF4

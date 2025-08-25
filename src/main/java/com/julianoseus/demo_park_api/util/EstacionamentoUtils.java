@@ -17,8 +17,6 @@ public class EstacionamentoUtils {
 
     private static final double DESCONTO_PERCENTUAL = 0.30;
 
-    private EstacionamentoUtils() {}
-
     public static BigDecimal calcularCusto(LocalDateTime entrada, LocalDateTime saida) {
         long minutes = entrada.until(saida, ChronoUnit.MINUTES);
         double total = 0.0;

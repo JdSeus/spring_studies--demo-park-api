@@ -82,7 +82,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "detrano@email.com",
+    "username": "deltrano@email.com",
     "password": "123456"
 }
 
@@ -105,11 +105,11 @@ Content-Type: application/json
 POST {{baseUrl}}/clientes
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaXRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE0ODI1MywiZXhwIjoxNzU2MTUwMDUzLCJyb2xlIjoiQ0xJRU5URSJ9.7VSmL_iqrZh_3pHqtHR6P1-DRAF_M4gqMcb0swymp28
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaXRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE1ODc4OSwiZXhwIjoxNzU2MTYwNTg5LCJyb2xlIjoiQ0xJRU5URSJ9.AdwsYgkmI4gOqNc_IpWkSVKcZvty5VfNbBQ8hA8RUyA"
 
 {
     "nome": "Citrano",
-    "cpf": "31918303088"
+    "cpf": "10390511030"
 }
 
 ###
@@ -136,10 +136,10 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiZWx0cmFub
 POST {{baseUrl}}/vagas
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE0ODMwOCwiZXhwIjoxNzU2MTUwMTA4LCJyb2xlIjoiQURNSU4ifQ.KepmLjrgMta1TFZ7JqMPd8SQDaT1sPVJu-JnoAI27i8
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE1ODg3MywiZXhwIjoxNzU2MTYwNjczLCJyb2xlIjoiQURNSU4ifQ.xKNu9FQccn1ZWfpaYRrbRodOMF55eneE_g-biiIpiD0
 
 {
-    "codigo": "A-05",
+    "codigo": "A-11",
     "status": "LIVRE"
 }
 
@@ -157,12 +157,37 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQ
 POST {{baseUrl}}/estacionamentos/check-in
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE0ODYwNSwiZXhwIjoxNzU2MTUwNDA1LCJyb2xlIjoiQURNSU4ifQ.qDxDRkB0hvfkQBovuX4k1QFKTotIfmup69q3havfocw
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE1ODg3MywiZXhwIjoxNzU2MTYwNjczLCJyb2xlIjoiQURNSU4ifQ.xKNu9FQccn1ZWfpaYRrbRodOMF55eneE_g-biiIpiD0
 
 {
-    "clienteCpf": "10390511030",
+    "clienteCpf": "31918303088",
     "placa": "ABC-0000",
     "marca": "FIAT",
     "modelo": "SIENA 1.6",
     "cor": "AZUL"
 }
+
+###
+#Checkin
+
+GET {{baseUrl}}/estacionamentos/check-in/20250825-185544
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE1ODg3MywiZXhwIjoxNzU2MTYwNjczLCJyb2xlIjoiQURNSU4ifQ.xKNu9FQccn1ZWfpaYRrbRodOMF55eneE_g-biiIpiD0
+
+{
+    "clienteCpf": "31918303088",
+    "placa": "ABC-0000",
+    "marca": "FIAT",
+    "modelo": "SIENA 1.6",
+    "cor": "AZUL"
+}
+
+###
+#Checkout
+
+PUT {{baseUrl}}/estacionamentos/check-out/20250825-185903
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE1ODg3MywiZXhwIjoxNzU2MTYwNjczLCJyb2xlIjoiQURNSU4ifQ.xKNu9FQccn1ZWfpaYRrbRodOMF55eneE_g-biiIpiD0
+

@@ -32,6 +32,8 @@ public class VagaService {
                     @ApiResponse(responseCode = "201", description = "Recurso criado com sucesso",
                         headers = @Header(name = HttpHeaders.LOCATION, description = "URL do recurso criado")
                     ),
+                    @ApiResponse(responseCode = "403", description = "Recurso não permitido ao perfil de CLIENTE", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorMessage.class
+                    ))),
                     @ApiResponse(responseCode = "409", description = "Vaga já cadastrada", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorMessage.class
                     ))),
                     @ApiResponse(responseCode = "422", description = "Recurso não processado por dados de entrada inválidos", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorMessage.class

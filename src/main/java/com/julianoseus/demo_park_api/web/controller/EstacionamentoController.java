@@ -144,13 +144,29 @@ public class EstacionamentoController {
 
     }
 
+    @Operation(summary = "Localizar os registros de estacionamentos do cliente logado", description = "Localizar os registros de estacionamentos do cliente logado. Requisição existe uso de um bearer Token.",
+            security = @SecurityRequirement(name = "security"),
+            parameters = {
+                    @Parameter(in = QUERY, name = "page", description = "Representa a página retornada", content = @Content(schema = @Schema(type = "integer", defaultValue = "0"))),
+                    @Parameter(in = QUERY, name = "size", description = "Representa o total de elementos por página", content = @Content(schema = @Schema(type = "integer", defaultValue = "5"))),
+                    @Parameter(in = QUERY, name = "sort", description = "Representa a página retornada", array = @ArraySchema(schema = @Schema(type = "string", defaultValue = "dataEntrada,asc")), hidden = true)
+            },
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Recurso localizado com sucesso",
+                            content = @Content(mediaType = "application/json;charset=UTF-8",
+                                    schema = @Schema(implementation = PageableDto.class)
+                            )
+                    ),
+                    @ApiResponse(responseCode = "403", description = "Recurso não permitido ao perfil de ADMIN", content = @Content(mediaType = "application/json;charset=UTF-8", schema = @Schema(implementation = ErrorMessage.class
+                    )))
+            }
+    )
     @GetMapping
     @PreAuthorize("hasRole('CLIENTE')")
     public ResponseEntity<PageableDto> getAllEstacionamentosDoCliente(@AuthenticationPrincipal JwtUserDetails user, @PageableDefault(size = 5, sort = "dataEntrada", direction = Sort.Direction.ASC) Pageable pageable) {
         Page<ClienteVagaProjection> projection = clienteVagaService.buscarTodosPorUsuarioId(user.getId(), pageable);
         PageableDto dto = PageableMapper.toDto(projection);
         return ResponseEntity.ok(dto);
-
     }
 
 }

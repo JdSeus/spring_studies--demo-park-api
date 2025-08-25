@@ -20,6 +20,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import static com.julianoseus.demo_park_api.entity.Vaga.StatusVaga.LIVRE;
+
 @RequiredArgsConstructor
 @Service
 public class VagaService {
@@ -66,4 +68,10 @@ public class VagaService {
         );
     }
 
+    @Transactional(readOnly = true)
+    public Vaga buscarPorVagaLivre() {
+        return vagaRepository.findFirstByStatus(LIVRE).orElseThrow(
+                () -> new EntityNotFoundException("Nenhuma vaga livre foi econtrada")
+        );
+    }
 }

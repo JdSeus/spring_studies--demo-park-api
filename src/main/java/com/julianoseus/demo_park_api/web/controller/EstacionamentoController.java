@@ -1,6 +1,7 @@
 package com.julianoseus.demo_park_api.web.controller;
 
 import com.julianoseus.demo_park_api.entity.ClienteVaga;
+import com.julianoseus.demo_park_api.service.ClienteVagaService;
 import com.julianoseus.demo_park_api.service.EstacionamentoService;
 import com.julianoseus.demo_park_api.web.dto.EstacionamentoCreateDto;
 import com.julianoseus.demo_park_api.web.dto.EstacionamentoResponseDto;
@@ -19,10 +20,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -34,6 +32,7 @@ import java.net.URI;
 public class EstacionamentoController {
 
     private final EstacionamentoService estacionamentoService;
+    private final ClienteVagaService clienteVagaService;
 
     @Operation(summary = "Operação de check-in", description = "Recurso para dar entrada de um veiculo no estacionamento. Requisição exige uso de um bearer token. Acesso restrito a Role='ADMIN'",
             security = @SecurityRequirement(name = "security"),
@@ -67,6 +66,14 @@ public class EstacionamentoController {
                 .toUri();
 
         return ResponseEntity.created(location).body(responseDto);
+    }
+
+    @GetMapping("/check-in/{recibo}")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CLIENTE')")
+    public ResponseEntity<EstacionamentoResponseDto> getByRecibo(@PathVariable String recibo) {
+        ClienteVaga clienteVaga = clienteVagaService.buscarPorRecibo(recibo);
+        EstacionamentoResponseDto dto = ClienteVagaMapper.toDto(clienteVaga);
+        return ResponseEntity.ok(dto);
     }
 
 }

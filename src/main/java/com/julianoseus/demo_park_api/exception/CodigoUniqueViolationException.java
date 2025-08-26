@@ -1,4 +1,4 @@
-package com.julianoseus.demo_park_api.web.exception;
+package com.julianoseus.demo_park_api.exception;
 
 public class CodigoUniqueViolationException extends RuntimeException {
 

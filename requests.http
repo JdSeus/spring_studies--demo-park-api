@@ -93,7 +93,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "beltrano@email.com",
+    "username": "altrano@email.com",
     "password": "123456"
 }
 
@@ -136,11 +136,25 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiZWx0cmFub
 POST {{baseUrl}}/vagas
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE1ODg3MywiZXhwIjoxNzU2MTYwNjczLCJyb2xlIjoiQURNSU4ifQ.xKNu9FQccn1ZWfpaYRrbRodOMF55eneE_g-biiIpiD0
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjIyNjg2NSwiZXhwIjoxNzU2MjI4NjY1LCJyb2xlIjoiQURNSU4ifQ.3EWXsU_v7yAJbZiHWq7d6PapiMz2ztIStHP1-0qjffA
 
 {
-    "codigo": "A-11",
-    "status": "LIVRE"
+    "codigo": "",
+    "status": ""
+}
+
+###
+#Create Vaga
+
+POST {{baseUrl}}/vagas
+Accept: application/json
+Content-Type: application/json
+Accept-Language: en
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjIyNjYyMywiZXhwIjoxNzU2MjI4NDIzLCJyb2xlIjoiQURNSU4ifQ.z8s-OARv1lyUJ49MMeFzfDvcOzFdhoW6GUORo_5h-dM
+
+{
+    "codigo": "",
+    "status": ""
 }
 
 ###

@@ -153,7 +153,7 @@ Accept-Language: en
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjIyOTQ4NywiZXhwIjoxNzU2MjMxMjg3LCJyb2xlIjoiQURNSU4ifQ._zAruREJE-_dS2oEo87fvADcvMDqszD6JH129Xp42PY
 
 {
-    "codigo": "A-01",
+    "codigo": "A-21",
     "status": "LIVRE"
 }
 
@@ -172,7 +172,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQ
 POST {{baseUrl}}/estacionamentos/check-in
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE1ODg3MywiZXhwIjoxNzU2MTYwNjczLCJyb2xlIjoiQURNSU4ifQ.xKNu9FQccn1ZWfpaYRrbRodOMF55eneE_g-biiIpiD0
+Accept-Language: en
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjIzMDUxMCwiZXhwIjoxNzU2MjMyMzEwLCJyb2xlIjoiQURNSU4ifQ.MQ00mNW5ndQJoQC13nFxGTECKIavPgMXuZ2o1GsALrs
 
 {
     "clienteCpf": "31918303088",

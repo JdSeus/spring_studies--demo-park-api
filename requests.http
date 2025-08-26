@@ -189,7 +189,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQ
 GET {{baseUrl}}/estacionamentos/check-in/20250825-185544
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE1ODg3MywiZXhwIjoxNzU2MTYwNjczLCJyb2xlIjoiQURNSU4ifQ.xKNu9FQccn1ZWfpaYRrbRodOMF55eneE_g-biiIpiD0
+Accept-Language: en
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjIzMDUxMCwiZXhwIjoxNzU2MjMyMzEwLCJyb2xlIjoiQURNSU4ifQ.MQ00mNW5ndQJoQC13nFxGTECKIavPgMXuZ2o1GsALrs
 
 {
     "clienteCpf": "31918303088",

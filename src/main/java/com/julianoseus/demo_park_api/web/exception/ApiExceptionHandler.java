@@ -21,6 +21,16 @@ public class ApiExceptionHandler {
 
     private final MessageSource messageSource;
 
+    @ExceptionHandler(ReciboCheckInNotFoundException.class)
+    public ResponseEntity<ErrorMessage> reciboCheckInNotFoundException(ReciboCheckInNotFoundException ex, HttpServletRequest request) {
+        Object[] params = new Object[]{ex.getRecibo()};
+        String message = messageSource.getMessage("exception.reciboCheckInNotFoundException", params, request.getLocale());
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(new ErrorMessage(request, HttpStatus.NOT_FOUND, message));
+    }
+
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<ErrorMessage> entityNotFoundException(EntityNotFoundException ex, HttpServletRequest request) {
         Object[] params = new Object[]{ex.getRecurso(), ex.getCodigo()};

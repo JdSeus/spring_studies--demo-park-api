@@ -93,7 +93,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username": "altrano@email.com",
+    "username": "beltrano@email.com",
     "password": "123456"
 }
 
@@ -190,4 +190,12 @@ PUT {{baseUrl}}/estacionamentos/check-out/20250825-185903
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE1ODg3MywiZXhwIjoxNzU2MTYwNjczLCJyb2xlIjoiQURNSU4ifQ.xKNu9FQccn1ZWfpaYRrbRodOMF55eneE_g-biiIpiD0
+
+###
+#Get Relatorio
+
+GET {{baseUrl}}/estacionamentos/relatorio
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiZWx0cmFub0BlbWFpbC5jb20iLCJpYXQiOjE3NTYyMTg3MzMsImV4cCI6MTc1NjIyMDUzMywicm9sZSI6IkNMSUVOVEUifQ.Tx16NbvBRFT3YSO8JZutqgAXNkpou7sgvPRkDYGNppY
 

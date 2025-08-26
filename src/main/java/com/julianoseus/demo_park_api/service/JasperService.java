@@ -36,7 +36,7 @@ public class JasperService {
         this.params.put(key, value);
     }
 
-    public byte[] gerarPdf {
+    public byte[] gerarPdf() {
         byte[] bytes = null;
         try {
             Resource resource = resourceLoader.getResource(JASPER_DIRETORIO.concat("estacionamentos.jasper"));

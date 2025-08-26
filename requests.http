@@ -150,20 +150,21 @@ POST {{baseUrl}}/vagas
 Accept: application/json
 Content-Type: application/json
 Accept-Language: en
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjIyNjYyMywiZXhwIjoxNzU2MjI4NDIzLCJyb2xlIjoiQURNSU4ifQ.z8s-OARv1lyUJ49MMeFzfDvcOzFdhoW6GUORo_5h-dM
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjIyOTQ4NywiZXhwIjoxNzU2MjMxMjg3LCJyb2xlIjoiQURNSU4ifQ._zAruREJE-_dS2oEo87fvADcvMDqszD6JH129Xp42PY
 
 {
-    "codigo": "",
-    "status": ""
+    "codigo": "A-01",
+    "status": "LIVRE"
 }
 
 ###
 #Get Vaga
 
-GET {{baseUrl}}/vagas/A-01
+GET {{baseUrl}}/vagas/A-013
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjE0ODUyNywiZXhwIjoxNzU2MTUwMzI3LCJyb2xlIjoiQURNSU4ifQ.0nHJ8TNRznD3D6iyLQ-Ead1KtG-N_9N9ONp871y0aKg
+Accept-Language: en
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRyYW5vQGVtYWlsLmNvbSIsImlhdCI6MTc1NjIzMDA2MiwiZXhwIjoxNzU2MjMxODYyLCJyb2xlIjoiQURNSU4ifQ.rV-dd9sYq4XI4o-h4w2yrEGOH_KvATwv1emxHfCSDoY
 
 ###
 #Checkin
